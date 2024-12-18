@@ -1,0 +1,6 @@
+Readme.txt
+dist
+node_modules
+.parcel-cache
+sendMail.js
+resume.html
