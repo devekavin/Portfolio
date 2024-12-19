@@ -28,7 +28,7 @@ html, body {
   overflow: hidden;
 }
 
-@media (prefers-color-scheme: darnk) {
+@media (prefers-color-scheme: dark) {
   body {
     color: #fdfffa;
     background: #1a1a1a;
