@@ -31,3 +31,31 @@ document
         alert("Failed to send email. Please try again later.");
       });
   });
+
+document
+  .getElementById("contactForm")
+  .addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      const formData = {
+        name: document.getElementById("senderName").value,
+        email: document.getElementById("senderEmail").value,
+        message: document.getElementById("message").value,
+      };
+
+      console.log("FormData:", formData);
+
+      emailjs
+        .send(service_key, template_key, formData, public_key)
+        .then(() => {
+          alert("Email sent successfully!");
+          document.getElementById("senderName").value = "";
+          document.getElementById("senderEmail").value = "";
+          document.getElementById("message").value = "";
+        })
+        .catch((error) => {
+          console.error("Error sending email:", error);
+          alert("Failed to send email. Please try again later.");
+        });
+    }
+  });

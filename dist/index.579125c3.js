@@ -3,10 +3,21 @@ console.log("%cHey Curious, If you like my work feel free to contact me @Kavin",
 // copyright year
 let currentYear = new Date();
 document.getElementById("year").innerHTML = currentYear.getFullYear();
-// toggle button
-document.getElementById("switch").addEventListener("click", function() {
-    let bodyTheme = document.body;
-    bodyTheme.classList.toggle("theme");
+// theme
+const bodyTheme = document.body;
+const switchButton = document.getElementById("switch");
+if (localStorage.getItem("theme") === "light") bodyTheme.classList.add("light-theme");
+else bodyTheme.classList.add("dark-theme");
+switchButton.addEventListener("click", ()=>{
+    if (bodyTheme.classList.contains("dark-theme")) {
+        bodyTheme.classList.remove("dark-theme");
+        bodyTheme.classList.add("light-theme");
+        localStorage.setItem("theme", "light");
+    } else {
+        bodyTheme.classList.remove("light-theme");
+        bodyTheme.classList.add("dark-theme");
+        localStorage.setItem("theme", "dark");
+    }
 });
 // scroll to top
 document.getElementById("scrollBtn1").addEventListener("click", function() {

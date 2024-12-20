@@ -42,9 +42,14 @@ html, body {
   }
 }
 
-.theme {
+.dark-theme {
   color: #fdfffa;
   background: #1a1a1a;
+}
+
+.light-theme {
+  color: #1a1a1a;
+  background: #fdfffa;
 }
 
 .container {

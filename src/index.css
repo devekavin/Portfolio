@@ -43,9 +43,13 @@ body {
 
 /* theme btn */
 
-.theme {
+.dark-theme {
   color: #fdfffa;
   background: #1a1a1a;
+}
+.light-theme {
+  background: #fdfffa;
+  color: #1a1a1a;
 }
 .container {
   scroll-snap-align: start;
