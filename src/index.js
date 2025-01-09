@@ -4,7 +4,7 @@ console.log(
 );
 console.log(
   "%cHey Curious, If you like my work feel free to contact me @Kavin",
-  "color:greenyellow; font-family:monospace; font-size: 15px"
+  "color:#adff2f; font-family:monospace; font-size: 15px"
 );
 
 // copyright year
