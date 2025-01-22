@@ -107,14 +107,14 @@ body {
   font-size: xxx-large;
   text-shadow: 5px 0px 0px greenyellow;
   font-weight: 600;
-  font-family: "circular";
+  font-family: sans-serif;
 }
 .initial2 {
   margin: 0px;
   font-size: xxx-large;
   text-shadow: 5px 0px 0px greenyellow;
   font-weight: 600;
-  font-family: "circular";
+  font-family: sans-serif;
   color: #020100;
   user-select: none;
 }
@@ -490,6 +490,9 @@ path {
   .coder-img {
     display: none;
   }
+  .contact-page {
+    background: none;
+  }
 }
 @media (max-width: 563px) {
   .intro-container {
@@ -519,11 +522,13 @@ path {
   margin-bottom: 0px;
 }
 .about1 {
+  /* text-align: justify; */
   padding: 4%;
   align-self: start;
   border-bottom: 5px solid greenyellow;
 }
 .about2 {
+  /* text-align: justify; */
   padding: 4%;
   align-self: end;
   border-top: 5px solid greenyellow;
@@ -765,7 +770,13 @@ path {
   flex-direction: column;
   gap: 50px;
   background: url(/assets/images/contact-bg.svg);
-  background-size: 100vh;
+  background-repeat: no-repeat;
+  background-size: 1500px 700px;
+}
+@media (max-width: 1285px) {
+  .contact-page {
+    background: none;
+  }
 }
 .contact-title {
   display: flex;
@@ -863,7 +874,7 @@ path {
     left: 22%;
   }
   .contact-page {
-    row-gap: 30px;
+    row-gap: 25px;
     justify-content: normal;
   }
   .contact-input1,

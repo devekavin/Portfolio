@@ -102,7 +102,7 @@ html, body {
   z-index: 10;
   text-shadow: 5px 0 #adff2f;
   margin: 0;
-  font-family: circular;
+  font-family: sans-serif;
   font-size: xxx-large;
   font-weight: 600;
   position: absolute;
@@ -115,7 +115,7 @@ html, body {
   color: #020100;
   user-select: none;
   margin: 0;
-  font-family: circular;
+  font-family: sans-serif;
   font-size: xxx-large;
   font-weight: 600;
 }
@@ -512,6 +512,10 @@ path {
   .coder-img {
     display: none;
   }
+
+  .contact-page {
+    background: none;
+  }
 }
 
 @media (width <= 563px) {
@@ -793,13 +797,19 @@ path {
 }
 
 .contact-page {
-  background: url("contact-bg.9d9f1db9.svg") 0 0 / 100vh;
+  background: url("contact-bg.9d9f1db9.svg") 0 0 / 1500px 700px no-repeat;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 50px;
   height: 100vh;
   display: flex;
+}
+
+@media (width <= 1285px) {
+  .contact-page {
+    background: none;
+  }
 }
 
 .contact-title {
@@ -912,7 +922,7 @@ path {
 
   .contact-page {
     justify-content: normal;
-    row-gap: 30px;
+    row-gap: 25px;
   }
 
   .contact-input1, .contact-input2, .contact-input3 {
