@@ -15,20 +15,31 @@ document.getElementById("year").innerHTML = currentYear.getFullYear();
 const bodyTheme = document.body;
 const switchButton = document.getElementById("switch");
 
-if (localStorage.getItem("theme") === "light") {
-  bodyTheme.classList.add("light-theme");
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+let storedTheme = localStorage.getItem("theme");
+
+if (storedTheme) {
+  if (storedTheme === "light") {
+    bodyTheme.classList.add("light-theme");
+  } else {
+    bodyTheme.classList.add("dark-theme");
+  }
 } else {
-  bodyTheme.classList.add("dark-theme");
+  if (prefersDarkScheme.matches) {
+    bodyTheme.classList.add("dark-theme");
+  } else {
+    bodyTheme.classList.add("light-theme");
+  }
 }
 
+// Theme toggle
 switchButton.addEventListener("click", () => {
   if (bodyTheme.classList.contains("dark-theme")) {
-    bodyTheme.classList.remove("dark-theme");
-    bodyTheme.classList.add("light-theme");
+    bodyTheme.classList.replace("dark-theme", "light-theme");
     localStorage.setItem("theme", "light");
   } else {
-    bodyTheme.classList.remove("light-theme");
-    bodyTheme.classList.add("dark-theme");
+    bodyTheme.classList.replace("light-theme", "dark-theme");
     localStorage.setItem("theme", "dark");
   }
 });
