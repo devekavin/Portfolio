@@ -807,6 +807,7 @@ path {
 .contact-input1,
 .contact-input2,
 .contact-input3 {
+  font-size: large;
   height: 50px;
   width: 280px;
   border: none;
